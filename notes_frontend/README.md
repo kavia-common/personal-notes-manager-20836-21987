@@ -1,59 +1,37 @@
-# Angular
+# Angular - Personal Notes App Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+This Angular project implements a modern, stylish notes manager UI using the **Ocean Professional** theme.  
+Features:
+- Sidebar navigation with "New Note" action
+- List of notes displayed as cards
+- Responsive two-column layout (Notes list & Editor)
+- Create, edit, view, and delete notes
+- Ocean Professional design: blue & amber accents, clean modern layout, subtle gradients, minimalist
 
-## Development server
+## File Structure Overview
 
-To start a local development server, run:
+- `src/app/models/note.model.ts`: TypeScript interface for a Note.
+- `src/app/services/notes.service.ts`: In-memory notes service (for demo).
+- `src/app/components/sidebar/`: Sidebar navigation.
+- `src/app/components/notes-list/`: List/cards of notes, select/delete notes.
+- `src/app/components/note-editor/`: Editor for creating/editing notes.
+- `src/app/app.component.*`: Main layout, connects all controls.
+- `src/app/app.component.css`: Implements Ocean Professional layout and theme.
 
-```bash
-ng serve
-```
+## Theming & Style
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app follows the **Ocean Professional** style guide:
+- Background/gradient: subtle light blue (`#2563EB0B`), surface `#fff`
+- Primary accent (`#2563EB` blue), secondary accent (`#F59E0B` amber/gold)
+- Minimalist, soft rounded design, subtle box-shadows, smooth transitions
+- Responsive: fully usable on mobile and desktop
 
-## Code scaffolding
+## Quick Start
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Run the dev server:
+   ```bash
+   ng serve
+   ```
+2. Open your browser to [http://localhost:4200/](http://localhost:4200/)
+3. Create, edit, delete notes and enjoy the modern Ocean Professional UX!
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

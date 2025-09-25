@@ -1,0 +1,28 @@
+<div class="notes-list">
+  <ng-container *ngIf="notes.length; else noNotes">
+    <div 
+      *ngFor="let note of notes" 
+      (click)="onSelect(note.id)"
+      [class.selected-card]="note.id === selectedNoteId"
+      class="note-card"
+      tabindex="0"
+    >
+      <div class="note-title-row">
+        <h3>{{ note.title || 'Untitled note' }}</h3>
+        <button class="delete-btn" title="Delete" (click)="onDelete(note.id, $event)">
+          <span aria-label="Delete">🗑️</span>
+        </button>
+      </div>
+      <div class="note-preview">
+        {{ note.content ? (note.content.slice(0, 80)) : '' }}
+        <span *ngIf="note.content && note.content.length > 80">…</span>
+      </div>
+      <div class="note-meta">
+        <span>{{ note.updatedAt | date:'medium' }}</span>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noNotes>
+    <div class="no-notes-msg">No notes yet. Click <span style="color:#2563EB;font-weight:600;">New Note</span> to get started!</div>
+  </ng-template>
+</div>

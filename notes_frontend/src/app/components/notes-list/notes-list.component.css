@@ -1,0 +1,97 @@
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem 2rem 2rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.note-card {
+  background: linear-gradient(105deg, #fffefe 65%, #2563EB10 140%);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 #2563EB10, 0 1px 0 0 #F59E0B10;
+  border: 1.2px solid transparent;
+  transition: background 0.15s, box-shadow 0.15s, border 0.17s;
+  padding: 1.2rem 1.1rem 0.8rem 1.1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 96px;
+}
+
+.note-card:hover, .note-card:focus-visible {
+  background: linear-gradient(99deg, #e8f0ff 70%, #F59E0B15 160%);
+  border: 1.2px solid #2563EB40;
+  box-shadow: 0 4px 18px 0 #2563eb25;
+}
+
+.selected-card {
+  border: 1.9px solid #2563EB;
+  background: linear-gradient(99deg, #2563eb17 60%, #F59E0B08 120%);
+}
+
+.note-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.note-title-row h3 {
+  margin: 0 0 0 2px;
+  color: #2563EB;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  flex: 1 1 auto;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  color: #EF4444;
+  font-size: 1.15em;
+  cursor: pointer;
+  opacity: .75;
+  margin-left: 0.7em;
+  border-radius: 5px;
+  transition: background 0.14s;
+  padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+}
+.delete-btn:hover {
+  background: #ffe5e4;
+  opacity: 1;
+}
+.note-preview {
+  color: #111827CB;
+  margin: 0.3rem 0 0.5rem 0;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  min-height: 25px;
+}
+
+.note-meta {
+  font-size: 0.81em;
+  color: #909bba;
+  margin-top: 0.5em;
+  text-align: right;
+}
+.no-notes-msg {
+  color: #222;
+  margin-top: 2em;
+  background: #f9fafb;
+  padding: 1.4em 1.2em;
+  border-radius: 14px;
+  font-size: 1.14em;
+  text-align: center;
+  box-shadow: 0 1.5px 7px 0 #2563EB10;
+}
+
+@media (max-width: 600px) {
+  .notes-list {
+    padding: 1rem .5rem;
+  }
+  .note-card {
+    border-radius: 10px;
+    padding: 0.85rem 0.7rem 0.7rem 0.9rem;
+  }
+}

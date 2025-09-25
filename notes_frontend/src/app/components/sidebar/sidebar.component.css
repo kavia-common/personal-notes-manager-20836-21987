@@ -1,0 +1,45 @@
+.sidebar {
+  width: 250px;
+  min-width: 220px;
+  height: 100vh;
+  background: linear-gradient(160deg, #2563EB0F 0%, #f9fafb 100%);
+  border-right: 1.5px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem 1.5rem 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #2563EB;
+}
+
+.new-note-btn {
+  background: linear-gradient(95deg, #2563EB 60%, #F59E0B 120%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.17s, background 0.18s;
+  box-shadow: 0 2px 8px 0 #2563EB10;
+}
+
+.new-note-btn:hover {
+  background: linear-gradient(90deg, #2156ce 55%, #e6991c 130%);
+  box-shadow: 0 2px 12px 0 #2563EB18;
+}

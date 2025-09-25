@@ -1,3 +1,23 @@
-<div class="container">
-  <h1>{{ title }}</h1>
+<div class="app-root-layout">
+  <app-sidebar (createNote)="onCreateNote()"></app-sidebar>
+  <div class="main-content-area">
+    <div class="notes-and-editor">
+      <div class="notes-list-col">
+        <app-notes-list
+          [notes]="notes"
+          [selectedNoteId]="selectedNoteId"
+          (noteSelect)="onNoteSelect($event)"
+          (noteDelete)="onNoteDelete($event)"
+        ></app-notes-list>
+      </div>
+      <div class="note-editor-col">
+        <app-note-editor
+          [note]="selectedNote"
+          [isNew]="creating"
+          (save)="onEditorSave($event)"
+          (cancel)="onEditorCancel()"
+        ></app-note-editor>
+      </div>
+    </div>
+  </div>
 </div>

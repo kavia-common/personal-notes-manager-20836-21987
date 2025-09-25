@@ -1,0 +1,41 @@
+<div class="note-editor-container" *ngIf="note || isNew; else emptyState">
+  <form (ngSubmit)="onSave()" autocomplete="off">
+    <div class="title-row">
+      <input 
+        type="text"
+        class="note-title-input"
+        placeholder="Title"
+        required
+        maxlength="100"
+        [(ngModel)]="editTitle"
+        name="title"
+        [disabled]="!note && !isNew"
+        tabindex="1"
+      >
+      <button class="cancel-btn" type="button" (click)="onCancel()" title="Cancel Edit" tabindex="4">Cancel</button>
+      <button 
+        class="save-btn" 
+        [disabled]="!editTitle.length" 
+        type="submit"
+        title="Save"
+        tabindex="3">Save</button>
+    </div>
+    <textarea 
+      class="note-content" 
+      placeholder="Type your note here..." 
+      [(ngModel)]="editContent"
+      name="content"
+      rows="10"
+      [disabled]="!note && !isNew"
+      tabindex="2"
+    ></textarea>
+    <div class="meta-row" *ngIf="note">
+      <span class="timestamp">{{ note.updatedAt | date:'short' }}</span>
+    </div>
+  </form>
+</div>
+<ng-template #emptyState>
+  <div class="empty-editor-state">
+    <p>Select a note to view/edit, or create a new note.</p>
+  </div>
+</ng-template>

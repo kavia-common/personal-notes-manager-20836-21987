@@ -1,0 +1,111 @@
+.note-editor-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 3px 32px 0 #2563EB10, 0 0.5px 2.5px 0 #F59E0B16;
+  min-height: 340px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+}
+.note-title-input {
+  flex: 1 1 60%;
+  padding: 0.8rem 1.2rem;
+  border: 1.2px solid #2563EB50;
+  border-radius: 8px;
+  font-size: 1.22rem;
+  font-weight: 500;
+  box-shadow: 0 5.5px 15px 0 #2563EB0C;
+  color: #2563EB;
+  transition: border 0.16s, box-shadow 0.13s;
+  background: #f9fafb;
+}
+.note-title-input:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0.8px 8px 0 #2563EB29;
+}
+.note-content {
+  width: 100%;
+  min-height: 180px;
+  font-size: 1.07rem;
+  font-family: inherit;
+  padding: 0.98rem 1.2rem;
+  border: 1.2px solid #2563EB35;
+  border-radius: 9px;
+  background: #FAFCFF;
+  margin-top: 0.27em;
+  resize: vertical;
+}
+.note-content:focus {
+  outline: none;
+  border-color: #2563EB90;
+  box-shadow: 0 0.5px 11px 0 #2563EB23;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.65rem 1.26rem;
+  margin-left: 0.12rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.16s;
+  box-shadow: 0 1.5px 8px 0 #2563EB10;
+}
+.save-btn {
+  background: linear-gradient(90deg, #2563EB 55%, #F59E0B 130%);
+  color: #fff;
+}
+.save-btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+.save-btn:hover:enabled {
+  background: linear-gradient(90deg, #2156ce 50%, #e6991c 100%);
+}
+.cancel-btn {
+  background: #fff8f3;
+  color: #F59E0B;
+  border: 1.2px solid #F59E0B;
+}
+.cancel-btn:hover {
+  background: #fff0e0;
+  color: #9a6b03;
+}
+.meta-row {
+  color: #2563EB98;
+  font-size: 0.96em;
+  margin-top: 7px;
+  text-align: right;
+}
+.empty-editor-state {
+  margin: 3.2em 0 0 0;
+  font-size: 1.15em;
+  color: #2563EB;
+  text-align: center;
+  background: #f3f6fb;
+  border-radius: 16px;
+  padding: 2em 1.2em;
+  box-shadow: 0 1.5px 8px 0 #2563EB09;
+}
+@media (max-width: 700px) {
+  .note-editor-container {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    margin: 0.5rem 0 1em 0;
+  }
+}
